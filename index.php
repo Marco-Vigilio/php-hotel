@@ -40,24 +40,39 @@
 
     ];
 
+    $empty = 0;
+
 ?>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Php Hotel</title>
-</head>
-<body>
-    <h1>Php Hotel</h1>
-    <?php foreach ($hotels as $key => $value) { ?>
-        <div>
-            <p><?php echo $value["name"] ?></p>
-            <p><?php echo $value["description"] ?></p>
-            <p><?php echo $value["parking"] ?></p>
-            <p><?php echo $value["vote"] ?></p>
-            <p><?php echo $value["distance_to_center"] ?></p>
-        </div>
-    <?php } ?>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Php Hotel</title>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main>
+            <h1 class="center">Php Hotel</h1>
+            <div class="contain">
+                <?php foreach ($hotels as $key => $value) { ?>
+                    <div class="item">
+                        <h2 class="center"><?php echo $value["name"] ?></h2>
+                        <div class="info">
+                            <p class="center"><?php echo $value["description"] ?></p>
+                            <ul>
+                                <li>parking: <?php echo $value["parking"] ?></li>
+                                <li>vote: <?php echo $value["vote"] ?></li>
+                                <li>distance to center: <?php echo $value["distance_to_center"] ?> km</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                <?php } ?>
+            </div>
+        </main>
+    </body>
 </html>
