@@ -13,21 +13,26 @@ body {
 }
 
 h1 {
-    margin: 3rem 0;
+    margin: 1rem 0;
 }
 
 h2 {
     padding: 1.5rem;
     border-bottom: 2px solid black;
+    color: #20ad96;
+}
+
+.flex {
+    display: flex;
 }
 
 .contain {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .center {
@@ -46,4 +51,25 @@ h2 {
 
 li {
     margin: 1rem 0;
+}
+
+.item:hover {
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+form {
+    justify-content: flex-end;
+}
+
+label {
+    padding: 0 .5rem;
+}
+
+form label:nth-last-of-type(1) {
+    margin-left: 2rem;
+}
+
+form input:last-child {
+    margin-left: 2rem;
 }
